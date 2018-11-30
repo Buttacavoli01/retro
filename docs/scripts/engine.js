@@ -76,6 +76,7 @@ var Engine = ( function(global)  {
             enemy.update(dt);
         });
         player.update();
+        //stone.update()
     }
 
     /* This function initially draws the "game level", it will then call
@@ -132,7 +133,9 @@ var Engine = ( function(global)  {
             enemy.render();
         });
 
+
         player.render();
+        stone.render()
     }
 
     /* This function does nothing but it could have been a good place to
@@ -152,7 +155,10 @@ var Engine = ( function(global)  {
         'img/char-cat-girl.png',
         'img/char-horn-girl.png',
         'img/char-pink-girl.png',
-        'img/char-princess-girl.png'
+        'img/char-princess-girl.png',
+        'img/gem-blue.png',
+        'img/gem-green.png',
+        'img/gem-orange.png'
     ]);
     Resources.onReady(init);
 
