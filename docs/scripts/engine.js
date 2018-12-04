@@ -74,9 +74,11 @@ var Engine = ( function(global)  {
     function updateEntities(dt) {
         allEnemies.map( (enemy) => {
             enemy.update(dt);
+            enemy.collisionCheck()
+            player.update();
+            gem.update()
         });
-        player.update();
-        //stone.update()
+
     }
 
     /* This function initially draws the "game level", it will then call
@@ -135,7 +137,7 @@ var Engine = ( function(global)  {
 
 
         player.render();
-        stone.render()
+        gem.render()
     }
 
     /* This function does nothing but it could have been a good place to

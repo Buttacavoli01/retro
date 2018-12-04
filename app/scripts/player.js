@@ -6,6 +6,8 @@ const spriteList = [
   'img/char-princess-girl.png'
 ];
 
+let score = 0;
+
 const startX = 200;
 const startY = 380;
 const middlePos = 50
@@ -29,18 +31,10 @@ class Player {
     if (this.x < 0) this.x = 0;
     // Check for player reaching top of canvas and winning the game
     if (this.y < 0) {
-      stone = new GemStone(xpos, ypos)
+      gem = new GemStone(xpos, ypos)
       this.x = startX;
       this.y = startY;
     }
-  }
-  grabbedStones() {
-    if (this.x < stone.xpos + 60 &&
-        this.x + 40 > stone.xpos &&
-        this.y < stone.ypos + 25 &&
-        30 + this.y > stone.ypos) {
-          console.log('grabbed the stone yo')
-        }
   }
 }
 

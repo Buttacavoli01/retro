@@ -12,24 +12,24 @@ class Enemy {
     this.sprite = 'img/enemy-bug.png';
   }
   render() {
-  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
   update(dt) {
     this.x += this.speed * dt;
     if (this.x > 500) {
       this.x = -100;
-      this.speed = 100 + Math.floor(Math.random() * 1000);
+      this.speed = 100 + Math.floor(Math.random() * 500);
     }
-    //triggers the hit as soon as they collide
+  }
+  collisionCheck() {
+    //triggers the hit as soon as they collide numbers act like a padding
     if (player.x < this.x + 60 &&
-        player.x + 40 > this.x &&
-        player.y < this.y + 25 &&
-        30 + player.y > this.y) {
+      player.x + 40 > this.x &&
+      player.y < this.y + 25 &&
+      30 + player.y > this.y) {
       //brings player back to starting pos
       player.x = startX;
       player.y = startY;
-      //console.log(this.x)
-    // console.log(this.y)
     }
   }
 }
