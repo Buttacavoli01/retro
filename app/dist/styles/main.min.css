@@ -1,0 +1,1 @@
+root{box-sizing:border-box}*,:after,:before{box-sizing:inherit;border:1px solid #000}.container{display:flex;align-content:center;justify-content:center}.fa-heart{color:red;font-size:1.5em;padding:.2em;position:relative;top:.8em;left:4.5em}.score_container{position:relative;align-self:center}#score{font-weight:700}

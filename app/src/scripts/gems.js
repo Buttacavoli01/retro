@@ -1,7 +1,7 @@
 const gemList = [
-  'img/gem-green.png',
-  'img/gem-blue.png',
-  'img/gem-orange.png'
+  '../../dist/assets/images/gem-green.png',
+  '../../dist/assets/images/gem-blue.png',
+  '../../dist/assets/images/gem-orange.png'
 ];
 
 let xpos = Math.floor((Math.random() * 300) + 1);

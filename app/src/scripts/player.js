@@ -1,16 +1,17 @@
+
 const spriteList = [
-  'img/char-boy.png',
-  'img/char-cat-girl.png',
-  'img/char-horn-girl.png',
-  'img/char-pink-girl.png',
-  'img/char-princess-girl.png'
+  '../../dist/assets/images/char-boy.png',
+  '../../dist/assets/images/char-cat-girl.png',
+  '../../dist/assets/images/char-horn-girl.png',
+  '../../dist/assets/images/char-pink-girl.png',
+  '../../dist/assets/images/char-princess-girl.png'
 ];
 
 let score = 0;
 
 const startX = 200;
 const startY = 380;
-const middlePos = 50
+const middlePos = 50;
 
 class Player {
   constructor(x, y, speed) {
@@ -31,7 +32,7 @@ class Player {
     if (this.x < 0) this.x = 0;
     // Check for player reaching top of canvas and winning the game
     if (this.y < 0) {
-      gem = new GemStone(xpos, ypos)
+      gem = new GemStone(xpos, ypos);
       this.x = startX;
       this.y = startY;
     }

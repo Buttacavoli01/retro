@@ -9,7 +9,7 @@ class Enemy {
     this.x = x;
     this.y = y;
     this.speed = speed;
-    this.sprite = 'img/enemy-bug.png';
+    this.sprite = '../../dist/assets/images/enemy-bug.png';
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
