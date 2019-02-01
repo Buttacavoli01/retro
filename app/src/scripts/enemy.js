@@ -4,6 +4,8 @@ let allEnemies = [];
 const enemyPosition = [50, 140, 220];
 let enemy;
 const path = '../../dist/assets/images/'
+let lives = 2,
+hearts = document.querySelectorAll('.fa-heart')
 
 class Enemy {
   constructor(x, y, speed) {
@@ -31,6 +33,11 @@ class Enemy {
       //brings player back to starting pos
       player.x = startX;
       player.y = startY;
+      scoreVal.innerText = score -= 75
+      hearts[lives].classList.remove('fas')
+      hearts[lives].classList.add('far')
+      lives--
+      endGame()
     }
   }
 }
@@ -40,3 +47,10 @@ enemyPosition.map((posY) => {
   enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 1000));
   allEnemies.push(enemy);
 });
+
+function endGame() {
+  if (lives < 0) {
+    document.querySelector('#canvas').style.display = 'none'
+    console.log('game over')
+  }
+}

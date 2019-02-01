@@ -8,7 +8,6 @@ var Engine = ( function(global)  {
         win = global.window,
         canvas = doc.getElementById('canvas'),
         ctx = canvas.getContext('2d'),
-        div = document.querySelector('gameboard'),
         lastTime;
 
     /* This function serves as the kickoff point for the game loop itself
@@ -74,9 +73,9 @@ var Engine = ( function(global)  {
     function updateEntities(dt) {
         allEnemies.map( (enemy) => {
             enemy.update(dt);
-            enemy.collisionCheck()
+            enemy.collisionCheck();
             player.update();
-            gem.update()
+            gem.update();
         });
 
     }
@@ -92,12 +91,12 @@ var Engine = ( function(global)  {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'img/water-block.png',   // Top row is water
-                'img/stone-block.png',   // Row 1 of 3 of stone
-                'img/stone-block.png',   // Row 2 of 3 of stone
-                'img/stone-block.png',   // Row 3 of 3 of stone
-                'img/grass-block.png',   // Row 1 of 2 of grass
-                'img/grass-block.png'    // Row 2 of 2 of grass
+                '../../dist/assets/images/water-block.png',   // Top row is water
+                '../../dist/assets/images/stone-block.png',   // Row 1 of 3 of stone
+                '../../dist/assets/images/stone-block.png',   // Row 2 of 3 of stone
+                '../../dist/assets/images/stone-block.png',   // Row 3 of 3 of stone
+                '../../dist/assets/images/grass-block.png',   // Row 1 of 2 of grass
+                '../../dist/assets/images/grass-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -137,7 +136,7 @@ var Engine = ( function(global)  {
 
 
         player.render();
-        gem.render()
+        gem.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -149,18 +148,18 @@ var Engine = ( function(global)  {
     }
 
     Resources.load([
-        'img/stone-block.png',
-        'img/water-block.png',
-        'img/grass-block.png',
-        'img/enemy-bug.png',
-        'img/char-boy.png',
-        'img/char-cat-girl.png',
-        'img/char-horn-girl.png',
-        'img/char-pink-girl.png',
-        'img/char-princess-girl.png',
-        'img/gem-blue.png',
-        'img/gem-green.png',
-        'img/gem-orange.png'
+        '../../dist/assets/images/stone-block.png',
+        '../../dist/assets/images/water-block.png',
+        '../../dist/assets/images/grass-block.png',
+        '../../dist/assets/images/enemy-bug.png',
+        '../../dist/assets/images/char-boy.png',
+        '../../dist/assets/images/char-cat-girl.png',
+        '../../dist/assets/images/char-horn-girl.png',
+        '../../dist/assets/images/char-pink-girl.png',
+        '../../dist/assets/images/char-princess-girl.png',
+        '../../dist/assets/images/gem-blue.png',
+        '../../dist/assets/images/gem-green.png',
+        '../../dist/assets/images/gem-orange.png'
     ]);
     Resources.onReady(init);
 

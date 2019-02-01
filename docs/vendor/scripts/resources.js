@@ -46,6 +46,7 @@
              * within our cache; we'll need to load this image.
              */
             var img = new Image();
+            img.src = url;
             img.onload = function() {
                 /* Once our image has properly loaded, add it to our cache
                  * so that we can simply return this image if the developer
@@ -66,7 +67,7 @@
              * the image's src attribute to the passed in URL.
              */
             resourceCache[url] = false;
-            img.src = url;
+
         }
     }
 

@@ -1,14 +1,15 @@
-
 const spriteList = [
-  '../../dist/assets/images/char-boy.png',
-  '../../dist/assets/images/char-cat-girl.png',
-  '../../dist/assets/images/char-horn-girl.png',
-  '../../dist/assets/images/char-pink-girl.png',
-  '../../dist/assets/images/char-princess-girl.png'
+  `${path}char-boy.png`,
+  `${path}char-cat-girl.png`,
+  `${path}char-horn-girl.png`,
+  `${path}char-pink-girl.png`,
+  `${path}char-princess-girl.png`
 ];
 
 let score = 0;
+const scoreVal = document.getElementsByClassName('score')[0]
 
+//aligns player to the middle bottom square of the grass
 const startX = 200;
 const startY = 380;
 const middlePos = 50;
@@ -35,41 +36,43 @@ class Player {
       gem = new GemStone(xpos, ypos);
       this.x = startX;
       this.y = startY;
+      scoreVal.innerText = (score += 100)
+      //console.log(`the current score is ${score}`)
     }
   }
 }
 
 
-  Player.prototype.handleInput = function(keyPress) {
-    switch (keyPress) {
-      case 'left':
-        this.x -= this.speed + middlePos;
-        console.log(this.x);
-        break;
-      case 'up':
-        this.y -= this.speed + 30;
-        console.log(this.y);
-        break;
-      case 'right':
-        this.x += this.speed + middlePos;
-        console.log(this.x);
-        break;
-      case 'down':
-        this.y += this.speed + 30;
-        console.log(this.y);
-        break;
-    }
+Player.prototype.handleInput = function(keyPress) {
+  switch (keyPress) {
+    case 'left':
+      this.x -= this.speed + 50;
+      console.log(this.x);
+      break;
+    case 'up':
+      this.y -= this.speed + 30;
+      console.log(this.y);
+      break;
+    case 'right':
+      this.x += this.speed + 50;
+      console.log(this.x);
+      break;
+    case 'down':
+      this.y += this.speed + 30;
+      console.log(this.y);
+      break;
+  }
+};
+
+// allows for character movement
+document.addEventListener('keyup', function(e) {
+  const allowedKeys = {
+    37: 'left',
+    38: 'up',
+    39: 'right',
+    40: 'down',
   };
+  player.handleInput(allowedKeys[e.keyCode]);
+});
 
-  // allows for character movement
-  document.addEventListener('keyup', function(e) {
-    const allowedKeys = {
-      37: 'left',
-      38: 'up',
-      39: 'right',
-      40: 'down',
-    };
-    player.handleInput(allowedKeys[e.keyCode]);
-  });
-
-  let player = new Player(startX, startY, middlePos);
+let player = new Player(startX, startY, middlePos);

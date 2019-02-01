@@ -1,7 +1,16 @@
 const gemList = [
-  `${path}gem-green.png`,
-  `${path}gem-blue.png`,
-  `${path}gem-orange.png`
+  green ={
+    name: 'green',
+    path: `${path}gem-green.png`
+  },
+  blue = {
+    name: 'blue',
+    path: `${path}gem-blue.png`
+  },
+  orange = {
+    name: 'orange',
+    path: `${path}gem-orange.png`
+  }
 ];
 
 let xpos = Math.floor((Math.random() * 300) + 1);
@@ -13,10 +22,12 @@ let ypos = Math.floor((Math.random() * 400) + 1);
 console.log(ypos);
 
 class GemStone {
-  constructor(x, y) {
+  constructor(x, y, power) {
     this.x = Math.floor((Math.random() * 300) + 1);
     this.y = Math.floor((Math.random() * 400) + 1);
-    this.sprite = gemList[Math.floor(Math.random() * gemList.length)];
+    //grabbing a random gem everytime
+    this.sprite = `${gemList[Math.floor(Math.random() * gemList.length)].path}`;
+
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -30,6 +41,7 @@ class GemStone {
         //moves the gem offscreen after being grabbed
         this.x = -100;
         this.y = -100;
+        scoreVal.innerText = score += 50
         console.log('grabbed the gemstone');
     }
   }

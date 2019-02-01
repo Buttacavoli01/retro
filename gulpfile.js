@@ -11,11 +11,11 @@ const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const paths = {
   styles: {
-    src: 'app/src/styles/**/*.sass',
+    src: 'app/src/styles/*.sass',
     dest: 'app/dist/styles/'
   },
   scripts: {
-    src: 'app/src/scripts/**/*.js',
+    src: 'app/src/scripts/*.js',
     dest: 'app/dist/scripts/'
   },
   images: {
