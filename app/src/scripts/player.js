@@ -40,8 +40,6 @@ class Player {
 }
 
 
-
-
   Player.prototype.handleInput = function(keyPress) {
     switch (keyPress) {
       case 'left':

@@ -3,13 +3,14 @@ let allEnemies = [];
 // Position 'y' where the enemies will are created
 const enemyPosition = [50, 140, 220];
 let enemy;
+const path = '../../dist/assets/images/'
 
 class Enemy {
   constructor(x, y, speed) {
     this.x = x;
     this.y = y;
     this.speed = speed;
-    this.sprite = '../../dist/assets/images/enemy-bug.png';
+    this.sprite = `${path}enemy-bug.png`;
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -34,7 +35,7 @@ class Enemy {
   }
 }
 
-// gives enemies
+// gives enemies a starting point with a random speed
 enemyPosition.map((posY) => {
   enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 1000));
   allEnemies.push(enemy);
