@@ -91,12 +91,12 @@ var Engine = ( function(global)  {
          * for that particular row of the game level.
          */
         var rowImages = [
-                '../../dist/assets/images/water-block.png',   // Top row is water
-                '../../dist/assets/images/stone-block.png',   // Row 1 of 3 of stone
-                '../../dist/assets/images/stone-block.png',   // Row 2 of 3 of stone
-                '../../dist/assets/images/stone-block.png',   // Row 3 of 3 of stone
-                '../../dist/assets/images/grass-block.png',   // Row 1 of 2 of grass
-                '../../dist/assets/images/grass-block.png'    // Row 2 of 2 of grass
+                'dist/assets/images/water-block.png',   // Top row is water
+                'dist/assets/images/stone-block.png',   // Row 1 of 3 of stone
+                'dist/assets/images/stone-block.png',   // Row 2 of 3 of stone
+                'dist/assets/images/stone-block.png',   // Row 3 of 3 of stone
+                'dist/assets/images/grass-block.png',   // Row 1 of 2 of grass
+                'dist/assets/images/grass-block.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -148,18 +148,18 @@ var Engine = ( function(global)  {
     }
 
     Resources.load([
-        '../../dist/assets/images/stone-block.png',
-        '../../dist/assets/images/water-block.png',
-        '../../dist/assets/images/grass-block.png',
-        '../../dist/assets/images/enemy-bug.png',
-        '../../dist/assets/images/char-boy.png',
-        '../../dist/assets/images/char-cat-girl.png',
-        '../../dist/assets/images/char-horn-girl.png',
-        '../../dist/assets/images/char-pink-girl.png',
-        '../../dist/assets/images/char-princess-girl.png',
-        '../../dist/assets/images/gem-blue.png',
-        '../../dist/assets/images/gem-green.png',
-        '../../dist/assets/images/gem-orange.png'
+        'dist/assets/images/stone-block.png',
+        'dist/assets/images/water-block.png',
+        'dist/assets/images/grass-block.png',
+        'dist/assets/images/enemy-bug.png',
+        'dist/assets/images/char-boy.png',
+        'dist/assets/images/char-cat-girl.png',
+        'dist/assets/images/char-horn-girl.png',
+        'dist/assets/images/char-pink-girl.png',
+        'dist/assets/images/char-princess-girl.png',
+        'dist/assets/images/gem-blue.png',
+        'dist/assets/images/gem-green.png',
+        'dist/assets/images/gem-orange.png'
     ]);
     Resources.onReady(init);
 
