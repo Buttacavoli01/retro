@@ -41,8 +41,8 @@ class GemStone {
         //moves the gem offscreen after being grabbed
         this.x = -100;
         this.y = -100;
-        scoreVal.innerText = score += 50
-        console.log('grabbed the gemstone');
+        scoreVal.innerText = score += 50;
+        //console.log('grabbed the gemstone');
     }
   }
 }

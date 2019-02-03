@@ -1,23 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe')
+$mint: #2ae8a7
+$ice: #b3dced
+$blue: #00f
+
 root
   box-sizing: border-box
-
 
 *,
 *::after,
 *::before
   box-sizing: inherit
 
+body
+  background-image: linear-gradient(-45deg, $ice, $mint,)
+  font-family: 'ZCOOL KuaiLe', cursive
 
 .container
-  display: flex
+  font-size: 2em
+  text-align: center
 
-  .score
-    color: blue
-    align-self: baseline
-    padding: .2em
-    height: 80px
-    width: 600px
+  canvas
+    margin-top: -1em
 
   .fa-heart
-    color: red
+    color: $blue
     padding: .2em

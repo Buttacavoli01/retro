@@ -7,7 +7,7 @@ const spriteList = [
 ];
 
 let score = 0;
-const scoreVal = document.getElementsByClassName('score')[0]
+var scoreVal = document.getElementsByClassName('score')[0];
 
 //aligns player to the middle bottom square of the grass
 const startX = 200;
@@ -36,7 +36,7 @@ class Player {
       gem = new GemStone(xpos, ypos);
       this.x = startX;
       this.y = startY;
-      scoreVal.innerText = (score += 100)
+      scoreVal.innerText = (score += 100);
       //console.log(`the current score is ${score}`)
     }
   }
