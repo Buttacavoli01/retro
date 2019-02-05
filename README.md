@@ -1,25 +1,21 @@
-# Arcade-Game-Clone-Udacity
-<hr>
-https://buttacavoli01.github.io/retro/
+# Bugger 2: A Bugs life
+  This game is a clone of the retro arcade game frogger.
+  
+ ## Instructions
+ 
+- Navigate to https://buttacavoli01.github.io/retro/
 
-Step 1: Run the file index.html to load the game.
+-	In this game you have a Player and Enemies (Bugs).
 
-Step 2: Use keyboard arrows to move left, right, top and down.
+-	The goal of the player is to reach the water, without colliding into any one of the enemies.
 
-Game Details
+-	The player can move left, right, up and down.
 
-•	In this game you have a Player and Enemies (Bugs).
+-	The enemies move in varying speeds on the paved block portion of the scene.
 
-•	The goal of the player is to reach the water, without colliding into any one of the enemies.
+-	Once the player collides with an enemy, the player moves back to the starting position and back one level.
 
-•	The player can move left, right, up and down.
-
-•	The enemies move in varying speeds on the paved block portion of the scene.
-
-•	Once the player collides with an enemy, the player moves back to the starting position and back one level.
-
-•	Once the player reaches the water the level is complete.
-
-•	Once the player completes level 10 the game is won.
+- You have 3 lives, use them wisely
 
 
+![alt-text](retro.png)
